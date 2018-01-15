@@ -17,8 +17,13 @@
         <a-asset-item id="exoItalicFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2BlackItalic.typeface.json?1490305922725"></a-asset-item>
       </a-assets>
 
-      <a-entity position="-3 1 -6" rotation="5 0 0">
+      <a-entity scale="2 2 2" geometry="primitive: torusKnot" position="-10 1 -10" material="color: red; metalness:1; roughness: 0.1; sphericalEnvMap: #sky;">
+        <a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360" repeat="indefinite"></a-animation>
+        <a-animation attribute="material.color" from="red" to="green" dur="1000" repeat="indefinite" direction="alternate"></a-animation>
+        <a-animation attribute="scale" dur="1000" from="2 2 2" to="0 0 0" repeat="indefinite" direction="alternate"></a-animation>
+      </a-entity>
 
+      <a-entity position="-3 1 -6" rotation="5 0 0">
         <a-entity position="0.5 0.5 -0.5" scale="0.6 1.2 1" text-geometry="value: Porto, Portugal; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 1; size: 1.5; height: 0.5;" material="color:pink; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;">
           <a-animation easing="linear" attribute="rotation" dur="10000" to="360 0 0" repeat="indefinite"></a-animation>
         </a-entity>
